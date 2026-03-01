@@ -1,4 +1,4 @@
-# NameCheapAutoDDNS
+# NamecheapAutoDDNS
 
 A lightweight, zero-dependency Python script for Windows that automatically updates Namecheap Dynamic DNS (DDNS) records when your public IP address changes.
 
