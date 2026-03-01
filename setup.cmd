@@ -6,7 +6,13 @@ if "%INSTALL_DIR:~-1%"=="\" set "INSTALL_DIR=%INSTALL_DIR:~0,-1%"
 
 set "PYTHON_DIR=%INSTALL_DIR%\python"
 set "ZIP_PATH=%INSTALL_DIR%\python-3.14.3.zip"
-set "PYTHON_URL=https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-amd64.zip"
+
+:: Detect OS Architecture
+set "ARCH=win32"
+if /i "%PROCESSOR_ARCHITECTURE%"=="AMD64" set "ARCH=amd64"
+if /i "%PROCESSOR_ARCHITEW6432%"=="AMD64" set "ARCH=amd64"
+
+set "PYTHON_URL=https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-%ARCH%.zip"
 
 echo Downloading Python 3.14.3 embeddable package...
 if not exist "%PYTHON_DIR%" (

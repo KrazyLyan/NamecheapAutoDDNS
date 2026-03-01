@@ -2,6 +2,10 @@
 
 A lightweight, zero-dependency Python script for Windows that automatically updates Namecheap Dynamic DNS (DDNS) records when your public IP address changes.
 
+**Supported Operating Systems:**
+- Windows 10 (32-bit & 64-bit)
+- Windows 11 (64-bit)
+
 It runs completely in the background as a Windows Scheduled Task, and requires nothing more than a simple configuration file.
 
 ## Features
