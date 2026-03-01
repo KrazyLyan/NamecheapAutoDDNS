@@ -1,0 +1,13 @@
+# Python portable package
+python/
+*.zip
+
+# Log files
+*.log
+
+# Cache files
+last_ip.txt
+__pycache__/
+
+# Configuration (contains sensitive DDNS passwords)
+config.json
