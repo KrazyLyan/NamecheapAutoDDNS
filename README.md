@@ -11,11 +11,12 @@ It runs completely in the background as a Windows Scheduled Task, and requires n
 - **Background Service**: Automatically registers itself in the Windows Task Scheduler to run silently on startup.
 - **Multi-Record Support**: Update multiple subdomains or domains at once in a single configuration file.
 - **Smart Update**: Caches your last known IP locally and only pings the Namecheap API when an actual IP change is detected.
+- **Concise & Rotating Logs**: Automatically parses Namecheap's XML responses for clean, human-readable log messages. Creates daily log files and retains only the last 5 days to save disk space.
 
 ## Setup Instructions
 
 1. **Configure your Domains**:
-   Open `config.json` and fill it with your Namecheap DDNS information.
+   Rename or copy the `config.json.example` file to `config.json`, then open it and fill it with your Namecheap DDNS information.
    *Note: To get your dynamic DNS password, log into Namecheap, select your domain, go to Advanced DNS, and scroll down to the Dynamic DNS section.*
 
    ```json
@@ -52,5 +53,5 @@ If you want to stop the service and remove it from your system startup:
 
 ## Troubleshooting
 
-- **Check the logs**: The script writes its operation status, including IP changes and API responses, to `ddns_updater.log` located in the same directory.
+- **Check the logs**: The script writes its operation status, including IP changes and parsed API responses, to date-stamped log files (e.g., `logs/ddns_updater_YYYY-MM-DD.log`) located in the new `logs` subdirectory.
 - **Scheduled Task Issues**: Open "Task Scheduler" in Windows and look for `AutoDDNS_Updater` to manually start, stop, or check the last run status of the script.

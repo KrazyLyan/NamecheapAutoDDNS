@@ -1,0 +1,15 @@
+{
+    "check_interval_seconds": 300,
+    "records": [
+        {
+            "host": "@",
+            "domain": "example.com",
+            "password": "your_dynamic_dns_password_here"
+        },
+        {
+            "host": "www",
+            "domain": "example.com",
+            "password": "your_dynamic_dns_password_here"
+        }
+    ]
+}
